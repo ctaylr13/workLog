@@ -20,7 +20,7 @@ class App extends Component {
     this.addLog = this.addLog.bind(this);
     this.onChangeMessage = this.onChangeMessage.bind(this);
     this.onChangeTitle = this.onChangeTitle.bind(this);
-    
+    this.deleteLog = this.deleteLog.bind(this);
     
   }
 
@@ -52,6 +52,12 @@ class App extends Component {
     });
   }
   
+  deleteLog = (id) => {
+    console.log(this.state);
+    this.setState(state => ({
+      entries: state.entries.filter(entries => entries.id !== id)
+    }))
+  }
   
 
   render() {
@@ -63,7 +69,7 @@ class App extends Component {
         onChangeTitle={this.onChangeTitle}
         onChangeMessage={this.onChangeMessage} />
        {this.state.entries.map(({ id, title, message, time }) => (
-         <WorkLog id={id} title={title} message={message} time={time} />
+         <WorkLog id={id} title={title} message={message} time={time} deleteFunction={this.deleteLog}/>
        ))}
       </div>
     );
