@@ -12,7 +12,7 @@ class WorkLog extends Component {
                 <ListGroup >
                     <TransitionGroup>
                         <CSSTransition key={id} timeout={500} classNames="fade">
-                            <ListGroupItem >
+                            <ListGroupItem color="secondary">
                                     <h3>Title: {title}</h3>
                                     <h4>Message: {message}</h4>
                                     <h6>{time}</h6> 

@@ -5,10 +5,11 @@ import uuid from 'uuid';
 class WorkForm extends Component {
 
     render() {
+    const { addLogFunction, onChangeMessage, onChangeTitle} = this.props;
     return (
         <Container>
             <Card>
-                <Form>
+                <Form onSubmit={e => addLogFunction(e)}>
                     <FormGroup>
                         <Label for="WorkFrom">Add Work Log</Label>
                         <Input 
@@ -17,12 +18,14 @@ class WorkForm extends Component {
                             id="WorkFrom" 
                             placeholder="Log Title"
                             margin-bottom="2rem"
+                            onChange={e => onChangeTitle(e)}
                         />
                         <Input 
                             type="textarea" 
                             name="message" 
                             id="WorkFrom" 
                             placeholder="Log Message"
+                            onChange={e => onChangeMessage(e)}
                         />
                     </FormGroup>
                     <Button
