@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import uuid from 'uuid';
 import WorkLog from './components/WorkLog';
+import WorkForm from './components/WorkForm';
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class App extends Component {
     return (
       <div className="App">
        <h1>Work Log</h1>
+       <WorkForm />
        {this.state.entries.map(({ id, title, message, time }) => (
          <WorkLog id={id} title={title} message={message} time={time} />
        ))}

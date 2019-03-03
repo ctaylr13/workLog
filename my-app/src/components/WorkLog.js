@@ -8,11 +8,11 @@ class WorkLog extends Component {
     render() {
         const { id, title, message, time } = this.props;
         return (
-            <Container marginBottom="0.5rem">
+            <Container >
                 <ListGroup >
                     <TransitionGroup>
                         <CSSTransition key={id} timeout={500} classNames="fade">
-                            <ListGroupItem>
+                            <ListGroupItem >
                                     <h3>Title: {title}</h3>
                                     <h4>Message: {message}</h4>
                                     <h6>{time}</h6> 
