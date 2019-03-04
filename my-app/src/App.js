@@ -39,6 +39,7 @@ class App extends Component {
 
   addLog = (e) => {
     e.preventDefault();
+    e.target.reset();
     console.log(this.state);
     var date = new Date();
     var newLog = {
