@@ -14,8 +14,8 @@ class App extends Component {
       newTitle: '',
       newMessage: '',
       entries: [
-            { id: uuid(), title: 'Alarm high energy consumpton is triggered', message: 'Energy consumption of this asset is high. Please resolve this issue ASAP',date: "dadf", time: 'time 1'},
-            { id: uuid(), title: 'New alarm created', message: 'A new alarm \'Low Apparent Power\' has been created.', date: "dadf", time: 'time 2'},
+            { id: uuid(), title: 'Alarm high energy consumpton is triggered', message: 'Energy consumption of this asset is high. Please resolve this issue ASAP',date: "2019-14-05", time: '00:08:00'},
+            { id: uuid(), title: 'New alarm created', message: 'A new alarm \'Low Apparent Power\' has been created.', date: "2019-14-05", time: '00:07:00'},
         ]
     };
     this.addLog = this.addLog.bind(this);
