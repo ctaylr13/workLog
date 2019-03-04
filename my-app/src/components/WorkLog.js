@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import uuid from 'uuid';
-import Timestamp from 'react-timestamp';
+import '../WorkLog.css';
+
 
 class WorkLog extends Component {
 
     deleteId = () => {
         const { id, deleteFunction } = this.props;
-        // console.log("id", id);
         deleteFunction(id);
     }
     render() {
-        const { id, title, message, date, time, deleteFunction } = this.props;
+        const { id, title, message, date, time } = this.props;
         return (
             <Container >
                 <ListGroup >
@@ -27,8 +26,8 @@ class WorkLog extends Component {
                                             onClick={this.deleteId}
                                         >Delete</Button>
                                     </h6>
-                                    <h3>Title: {title}</h3>
-                                    <h4>Message: {message}</h4>
+                                    <h3 color="primary">{title}</h3>
+                                    <h4 color="primary">{message}</h4>
                                     <h6>Date: {date}</h6> 
                                     <h6>Time: {time}</h6> 
                             </ListGroupItem>
