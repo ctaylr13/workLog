@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Timestamp from 'react-timestamp';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import uuid from 'uuid';
@@ -73,7 +72,7 @@ class App extends Component {
         onChangeTitle={this.onChangeTitle}
         onChangeMessage={this.onChangeMessage} />
        {this.state.entries.map(({ id, title, message, date, time }) => (
-         <WorkLog id={id} title={title} message={message} date={date} time={time} deleteFunction={this.deleteLog}/>
+         <WorkLog key={id} id={id} title={title} message={message} date={date} time={time} deleteFunction={this.deleteLog}/>
        ))}
       </div>
     );

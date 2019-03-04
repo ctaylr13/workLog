@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Card, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import '../WorkForm.css'
-import uuid from 'uuid';
+import { Container, Card, Button, Form, FormGroup, Label, Input} from 'reactstrap';
+
 
 class WorkForm extends Component {
 
@@ -12,10 +11,8 @@ class WorkForm extends Component {
             <Card>
                 <Form onSubmit={e => addLogFunction(e)}>
                     <FormGroup>
-                        <Label for="WorkFrom" class="label">Add new log</Label>
+                        <Label for="WorkFrom">Add new log</Label>
                         <Input
-                            class="title"
-                            size="" 
                             type="textarea" 
                             name="title" 
                             id="WorkFrom" 
