@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
-
+import Timestamp from 'react-timestamp';
 
 class WorkLog extends Component {
 
@@ -12,7 +12,7 @@ class WorkLog extends Component {
         deleteFunction(id);
     }
     render() {
-        const { id, title, message, time, deleteFunction } = this.props;
+        const { id, title, message, date, time, deleteFunction } = this.props;
         return (
             <Container >
                 <ListGroup >
@@ -29,7 +29,8 @@ class WorkLog extends Component {
                                     </h6>
                                     <h3>Title: {title}</h3>
                                     <h4>Message: {message}</h4>
-                                    <h6>{time}</h6> 
+                                    <h6>Date: {date}</h6> 
+                                    <h6>Time: {time}</h6> 
                             </ListGroupItem>
                         </CSSTransition>
                     </TransitionGroup>
